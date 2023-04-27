@@ -21,7 +21,21 @@ Salesperson.destroy_all
 
 # 2. insert 1-2 rows in salespeople table.
 
+salesperson1 = Salesperson.new
+salesperson1["first_name"] = "Ben"
+salesperson1["last_name"] = "Jor"
+salesperson1.save
+
+salesperson2 = Salesperson.new
+salesperson2["first_name"] = "Brian"
+salesperson2["last_name"]= "Bot"
+salesperson2.save
+
 # 3. write code to display how many salespeople rows are in the database
+
+all_salespeople = Salesperson.all
+puts all_salespeople.inspect
+puts "There are #{Salesperson.all.count} salespeople"
 
 # ---------------------------------
 # Salespeople: 2
